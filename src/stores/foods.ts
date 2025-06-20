@@ -10,7 +10,7 @@ export interface Food {
 
 export const useFoodsStore = defineStore('foods', {
   state: () => ({
-    foods: [] as Food[], // Replace any with a Food type later
+    foods: [] as Food[],
   }),
   actions: {
     addFood(food: Food) {
