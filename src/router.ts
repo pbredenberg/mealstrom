@@ -12,7 +12,7 @@ const routes: Array<RouteRecordRaw> = [
     path: '/foods',
     name: 'Foods',
     component: FoodsView,
-  }
+  },
 ];
 
 const router = createRouter({

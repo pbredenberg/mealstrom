@@ -1,7 +1,4 @@
-<script setup lang="ts">
-import { ref } from 'vue';
-import { invoke } from '@tauri-apps/api/core';
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <div className="navbar bg-base-100 shadow-sm sticky top-0">
@@ -51,7 +48,12 @@ import { invoke } from '@tauri-apps/api/core';
     <router-view />
   </main>
   <div class="dock sticky bottom-0">
-    <router-link to="/" class="dock-link" custom v-slot="{ navigate, href, isActive }">
+    <router-link
+      to="/"
+      class="dock-link"
+      custom
+      v-slot="{ navigate, isActive }"
+    >
       <button :class="isActive ? 'dock-active' : ''" @click="navigate">
         <svg
           class="size-[1.2em]"
@@ -91,13 +93,28 @@ import { invoke } from '@tauri-apps/api/core';
       </button>
     </router-link>
 
-    <router-link to="/foods" class="dock-link" custom v-slot="{ navigate, href, isActive }">
+    <router-link
+      to="/foods"
+      class="dock-link"
+      custom
+      v-slot="{ navigate, isActive }"
+    >
       <button :class="isActive ? 'dock-active' : ''" @click="navigate">
-        <svg class="size-[1.2em]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <svg
+          class="size-[1.2em]"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+        >
+          <g
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
             <path d="M7 4v5" />
-            <path d="M10 4v5" />  
-            <path d="M14 4v5" />  
+            <path d="M10 4v5" />
+            <path d="M14 4v5" />
             <path d="M17 4v5" />
             <path d="M7 9c0 3 2 5 5 5s5-2 5-5" />
             <path d="M12 14v8" />
